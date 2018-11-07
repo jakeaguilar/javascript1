@@ -22,7 +22,7 @@ function myBio(){
     //Favorite Hobby variable
     var favHobby = "FAVORITE HOBBY: While I do enjoy learning about software in general, i also LOVE to build PCs. In fact, i believe it is what really got me into technology in the first place. I remember having a friend help build my very first PC years ago, and now i love helping others build their PCs, whether it be a simple desktop for productivity, to balls to the wall gaming or workstation PCs. And when im not building pcs im hanging with friends and drinking alcohol.";
     
-    var bio = ` Name: ${firstName} ${lastName}\n\n Nickname: ${nickName}\n\n ${classDesires}\n ${favHobby}`;
+    var bio = ` Name: ${firstName} ${lastName}\n\n Nickname: gt ${nickName}\n\n ${classDesires}\n ${favHobby}`;
     console.log(bio);
     alert(bio);
 
