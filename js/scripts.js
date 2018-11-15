@@ -61,5 +61,5 @@
         }
         }
         else if(askName.toLowerCase() == null || askName.toLowerCase() == ""){
-        let askName = prompt("Hello?! you didnt enter your name! What is your first and last name?", "John Doe");
+        let askName = prompt("Hello?!? you didnt enter your name! What is your first and last name?", "John Doe");
         }
