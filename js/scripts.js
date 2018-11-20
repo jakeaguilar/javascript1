@@ -223,20 +223,71 @@
     }
 
     // TRY IT OUT
-    var movieArray = [];
+    // var movieArray = [];
 
-    let favMovie1 = ["Inception", "Dominic", 2008];
-    let favMovie2 = ["SW:ESB", "Darth Vader", 1999];
-    let favMovie3 = ["LOTR: RoTK", "Aragorn", 2006];
-    let favMovie4 = ["The Matrix", "Morpheous", 1999];
-    let favMovie5 = ["Avengers: IW", "Iron Man", 2018];
+    // let favMovie1 = ["Inception", "Dominic", 2008];
+    // let favMovie2 = ["SW:ESB", "Darth Vader", 1999];
+    // let favMovie3 = ["LOTR: RoTK", "Aragorn", 2006];
+    // let favMovie4 = ["The Matrix", "Morpheous", 1999];
+    // let favMovie5 = ["Avengers: IW", "Iron Man", 2018];
     
-    movieArray.push(favMovie1,favMovie2,favMovie3,favMovie4,favMovie5);
+    // movieArray.push(favMovie1,favMovie2,favMovie3,favMovie4,favMovie5);
 
-    for(let i = 0; i < movieArray.length; i++){
-        if(movieArray[i][0] === "Inception"){
-        alert(`${movieArray [i][0]} ${movieArray[i][1]}`)
-        }
+    // for(let i = 0; i < movieArray.length; i++){
+    //     if(movieArray[i][0] === "Inception"){
+    //     alert(`${movieArray [i][0]} ${movieArray[i][1]}`)
+    //     }
+    // }
+    
+}
+
+//TAKE HOME
+// let toDoList =[];
+// let userToDo = prompt("What do you need to get done this weekend?").toLowerCase();
+// console.log(`User input: ${userToDo}`)
+// if (userToDo !== null || userToDo !== ""){
+//     toDoList.push(userToDo);
+//     console.log(`Item input into array: ${toDoList}`);
+//     for (i = 0; i  < toDoList.length; i++){
+//         if(userToDo[i] !== null || userToDo !== ""){
+//             alert(`To Do List: ${toDoList}`);
+//         } else{
+//             alert("you didnt add anything to the list!")
+//         }
+//     }
+// }
+
+// TAKE HOME IN CLASS
+const item1 = prompt("What do you need to get done?");
+const item2 = prompt("What do you need to get done?");
+const item3 = prompt("What do you need to get done?");
+console.log(item1, item2, item3);
+const toDoList = [];
+toDoList.push([item1], [item2], [item3]);
+
+for(let i = 0; i < toDoList.length; i++){
+    toDoList[i].push(+prompt(`How long will ${toDoList[i][0]} take?`));
+}
+
+let longestItem = 0;
+let longestItemIndex = 0;
+
+for(let i = 0; i < toDoList.length; i++){
+    if(toDoList[i][1] > longestItem){
+        longestItem = toDoList[i][1];
+        longestItemIndex = i;
+
     }
-    
+
+    console.log(`Longest item to do: ${longestItem}`);
+    console.log(`Longest Item Index : ${longestItemIndex}`);
+
+}
+console.log(`Longest Item: ${toDoList[longestItemIndex]}`);
+console.log(`Longest Item: ${toDoList.splice([longestItemIndex], 1)}`);
+console.log(toDoList);
+
+for (let item of toDoList){
+    item.push("ez-pz")
+    alert(item);
 }
