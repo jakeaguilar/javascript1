@@ -168,41 +168,99 @@
 
         // RECURSION
         {
-            function getName(){
-                const name = prompt("Whats yo name?")
+            // function getName(){
+            //     const name = prompt("Whats yo name?")
 
-                if(!name) {
-                    getName();
-                }
-            }
+            //     if(!name) {
+            //         getName();
+            //     }
+            // }
 
-            getName();
+            // getName();
         }
     }
 }
 
 // METHOD v FUNCTION 
 {
-    class Person {
-        constructor(name, age){
-        this.name = name;
-        this.age = age;
-        }
+    // class Person {
+    //     constructor(name, age){
+    //     this.name = name;
+    //     this.age = age;
+    //     }
 
-        sayName() {
-            console.log(this.name);
-        }
+    //     sayName() {
+    //         console.log(this.name);
+    //     }
 
-        howOld() {
-            console.log(this.age);
+    //     howOld() {
+    //         console.log(this.age);
+    //     }
+    // }
+
+    // const jake = new Person ("Jake", 25);
+    // const sam = new Person ("Sam", 22);
+
+    // console.log(jake.howOld());
+    // console.log(sam.howOld());
+
+
+
+
+
+}
+
+// TAKE HOME
+{
+
+    // FUNCTION ONE: SQUARE A NUMBER
+    // function square(){
+    //     let userNum = +prompt("What number do you want to square?");
+    //     console.log(typeof(userNum));
+    //     let userNumSquare = Math.pow(userNum, 2);
+    //     console.log(`User Number Squared is: ${userNumSquare}`);
+    //     if(isNaN(userNum)){
+    //         square();
+    //     }else{
+    //         alert(`User Number Squared is: ${userNumSquare}`);
+    //     }
+    // }
+    // square();
+    
+    // FUNCTION TWO: 
+
+    //Capitalize
+    function capitalize (string){
+        if (typeof string !== 'string'){
+            console.log("not a word bro");
+        }else{
+            let stringCap = string.charAt(0).toUpperCase() + string.slice(1)
+            // let stringPeriod = string.length
+            console.log(stringCap);
         }
     }
+    //Period Add
 
-    const jake = new Person ("Jake", 25);
-    const sam = new Person ("Sam", 22);
 
-    console.log(jake.howOld());
-    console.log(sam.howOld());
+    //String Reverse
+    function reverseString(string) {
+        let reversed = string.split("").reverse().join("");
+        console.log(reversed);
+        if (reversed == string){
+            console.log("YOU ENTERED A PALINDROME");
+        }else{
+            console.log("Not a palindrome, but cool word doe...");
+        }
+    }
+    
+    
+    let userString = prompt("Type a word");
+    capitalize(userString);
+    reverseString(userString);
+
+
+
+
 
 
 
